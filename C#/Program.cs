@@ -1,9 +1,24 @@
-﻿namespace C_;
+﻿using System;
+using System.Linq;
+using Numeric;
 
-class Program
+using LinearAlgebra;
+namespace Numeric;
+
+public static class Program
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        Console.WriteLine("Hello, World!");
+        var va = new CVector([1, 2, 3]);
+        var vb = new RVector([3, 6, 9]);
+        double[,] source = new double[,]
+        {
+            {2,4,6},
+            {3,6,9},
+            {4,8,12}
+        };
+        var m = new Matrix(source);
+        Console.WriteLine((vb * m).ToString());
     }
 }
+
