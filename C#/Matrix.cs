@@ -1,6 +1,6 @@
 namespace LinearAlgebra;
 
-public class Matrix
+public partial class Matrix
 {
     double[] data;
     public int Rows { get; }
@@ -148,7 +148,6 @@ public class Matrix
     {
         return a * m;
     }
-
 
     /// <summary>
     /// A = A + k * cv * rv
